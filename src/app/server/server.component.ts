@@ -8,12 +8,22 @@ import { Component } from '@angular/core';
 export class ServerComponent {
   serverId: number = 10;
   serverName: String ='Server';
-  serverStatus: String = 'Offline'
-  serverIp: String = '127.0.0.1'
+  serverStatus: String = '';
+  serverIp: String = '127.0.0.1';
+
+  constructor(){
+
+    this.serverStatus = Math.random() > 0.5 ? 'Online' : 'OffLine';
+
+  }
 
 
   getServerStatus(){
-    return this.serverStatus+"Method";
+    return this.serverStatus;
+  }
+
+  getStatusCollor(){
+    return this.serverStatus === 'Online' ? 'green' : 'red';
   }
 
 }

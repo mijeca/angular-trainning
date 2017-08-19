@@ -1,0 +1,24 @@
+<h3>User Info</h3>
+<input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="userName"
+        >
+<button 
+    class="btn btn-primary" 
+    [disabled]="namesIsEmpty()"
+    (click)="saveUserName()"
+ >Save User</button>
+<p>{{ userName }}</p>
+
+<button 
+class="btn btn-primary"
+(click)="savePassword()"
+>Set Password</button>
+<p *ngIf="!password">Secret Password Details</p>  
+
+<ul>
+  <li *ngFor="let item of tries; let i = index "
+    [ngClass]="{ 'odd-item':i%2!=0 , 'even-item': i%2==0}"
+  > {{ item }}</li>
+</ul>

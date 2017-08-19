@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import {AppMessage} from './message/message.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {AppMessage} from './message/message.component';
     AppComponent,
     ServerComponent,
     ServersComponent,
-    AppMessage
+    AppMessage,
+    UserinfoComponent
   ],
   imports: [
     BrowserModule,
